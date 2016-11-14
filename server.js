@@ -19,26 +19,27 @@ app.get('/', function (req,res){
 //Webhook for Messages.  Check if 1:1 or Group Room.
 app.post('/messages', function (req, res) {
 
-	//message = req.body
+	message = req.body
 
-	//console.log(JSON.stringify(message))
+	console.log(JSON.stringify(message))
 
 	//confirm its not a message we sent we're seeing in the webhook
-	// if (message.data.personId != 'abcd') {
+	if (message.data.personId != 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS80ZThjMDgzMy02NDdlLTRkYmEtOTU4Mi1jYWNmMDJjYzE3YjA') {
 
-	// 	spark.getMessage(messageId, function(err,message) {
-	// 		if (err) {
-	// 	   		console.dir('Error getting Spark message');
-	// 	   		console.error(err)
-	// 	   	}
-	// 	   	else {
-	// 	   		sendSparkMessage(message.roomId,message.text,'markdown',true)
-	// 	   	}
-	// 	})
+		spark.getMessage(messageId, function(err,message) {
+			if (err) {
+		   		console.dir('Error getting Spark message');
+		   		console.error(err)
+		   	}
+		   	else {
+		   		console.log(message)
+		   		sendSparkMessage(message.roomId,message.text,'markdown',true)
+		   	}
+		})
 
 		
 	
-	// }
+	}
 
 	res.sendStatus(200)
 })
