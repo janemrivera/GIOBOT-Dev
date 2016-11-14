@@ -1,0 +1,27 @@
+{
+  "name": "ecolab",
+  "version": "1.0.0",
+  "description": "Ecolab Spark Bot",
+  "main": "ecolab.js",
+  "scripts": {
+    "test": "echo \\\\\\\"Error: no test specified\\\\\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+  },
+  "keywords": [
+    "SalesConnect",
+    "Spark"
+  ],
+  "author": "cbleeker",
+  "license": "MIT",
+  "bugs": {
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0",
+    "node-sparkclient": "^0.1.1",
+    "request": "^2.74.0"
+  }
+}
