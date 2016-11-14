@@ -11,6 +11,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var bearerToken = process.env.bearerToken
 var spark = new CiscoSparkClient(bearerToken)
 
+app.get('/', function (req,res){
+	res.send('ok').status(200)
+})
+
 
 //Webhook for Messages.  Check if 1:1 or Group Room.
 app.post('/messages', function (req, res) {
