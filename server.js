@@ -55,7 +55,7 @@ function sendSparkMessage(roomId, message, format, retry, callback) {
 	switch (format) {
 		case 'text':
 			break;
-		case 'html':T
+		case 'html':
 			messageParams.html = true
 			break;
 		case 'markdown':
