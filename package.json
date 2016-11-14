@@ -2,7 +2,6 @@
   "name": "ecolab",
   "version": "1.0.0",
   "description": "Ecolab Spark Bot",
-  "main": "./server.js",
   "scripts": {
     "test": "echo \\\\\\\"Error: no test specified\\\\\\\" && exit 1"
   },
@@ -13,6 +12,9 @@
     "SalesConnect",
     "Spark"
   ],
+  "scripts": {
+    "start": "node server"
+  },
   "noAnalyze": true,
   "author": "cbleeker",
   "license": "MIT",
