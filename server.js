@@ -83,7 +83,7 @@ function sendSparkMessage(roomId, message, format, retry, callback) {
 
 
 //Web Server Port
-var port = 80
+var port = process.env.PORT
 
 // Create an HTTP service.
 app.listen(port);
